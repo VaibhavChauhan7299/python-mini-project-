@@ -3,7 +3,11 @@ import random
 target = random.randint(1, 100)
 
 while True:
-    userChoice = int(input("Guess the target : "))
+    userChoice = input("Guess the target or Quit(Q): ")
+    if(userChoice == "Q"):
+        break
+
+    userChoice = int(userChoice)
     if(userChoice == target):
         print("Success : Correct Guess!! ")
         break
